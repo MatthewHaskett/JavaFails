@@ -1,1 +1,3 @@
+com\UnfamousThomas\commands\ping.class
 com\UnfamousThomas\Start.class
+com\UnfamousThomas\utils\RegCommand.class
