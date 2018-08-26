@@ -4,8 +4,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ping extends BukkitCommand {

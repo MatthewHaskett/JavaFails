@@ -7,7 +7,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
 
-import javax.print.DocFlavor;
 import java.util.Arrays;
 
 public class spawn extends BukkitCommand {
