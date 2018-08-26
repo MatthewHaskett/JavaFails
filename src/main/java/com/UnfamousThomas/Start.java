@@ -1,5 +1,6 @@
 package com.UnfamousThomas;
 
+import com.UnfamousThomas.commands.fun;
 import com.UnfamousThomas.commands.ping;
 import com.UnfamousThomas.utils.RegCommand;
 import org.bukkit.Bukkit;
@@ -12,4 +13,5 @@ public class Start extends JavaPlugin {
 
         Bukkit.getServer().getLogger().info("WOW IT ENABLED!");
         RegCommand.RegisterCommand(new ping());
+        RegCommand.RegisterCommand(new fun());
     }}
