@@ -18,21 +18,25 @@ public class SpawnCommand extends BukkitCommand {
 
         setAliases(Arrays.asList("home","s"));
         setDescription("teleports to spawn.");
-}
+    }
 
     public boolean execute(CommandSender sender, String s, String[] args) {
-            if (!(sender instanceof Player)) {
-                Messages.tell(sender, "&4NO! YOU ARE NOT A PLAYER NOOB!");
-                return false;
-            }
-        Player player = (Player) sender;
-        if (!(player.hasPermission("fails.spawn"))){
-                Messages.tell(sender, "&4You do not have permissions for that.");
-                return false;
+        if (!(sender instanceof Player)) {
+            Messages.tell(sender, "&4NO! YOU ARE NOT A PLAYER NOOB!");
+            return true;
         }
+
+        Player player = (Player) sender;
+
+        if (!(player.hasPermission("fails.spawn"))){
+            Messages.tell(sender, "&4You do not have permissions for that.");
+            return true;
+        }
+
         Messages.tell(sender,"&6Teleported you to spawn.");
         player.teleport(new Location(Bukkit.getWorld("world"), 294, 74, 182));
         player.getInventory().addItem(new ItemStack(Material.DIAMOND, 2));
         return false;
-        }
+
     }
+}

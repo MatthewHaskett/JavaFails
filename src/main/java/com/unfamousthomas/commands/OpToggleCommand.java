@@ -16,29 +16,30 @@ public class OpToggleCommand extends BukkitCommand {
     }
 
     public boolean execute(CommandSender sender, String s, String[] args) {
-            if (!(sender instanceof Player)) {
-                Messages.tell(sender,"&4You are not a player.");
-                return false;
-            }
-            if (!sender.hasPermission("fails.op")) {
-                Messages.tell(sender, "&4You do not have enough permissions.");
-                return false;
-            }
-            Player player = (Player) sender;
-            if (player.isOp()) {
-                player.setOp(false);
-                Messages.tell(sender, "&6Succesfully de-opped you!");
-                return false;
-            }
-            if (!player.isOp()) {
-                player.setOp(true);
-                Messages.tell(sender, "&6Succesfully opped you!");
-                return false;
-            }
+        if (!(sender instanceof Player)) {
+            Messages.tell(sender,"&4You are not a player.");
+            return true;
+        }
 
+        if (!sender.hasPermission("fails.op")) {
+            Messages.tell(sender, "&4You do not have enough permissions.");
+            return true;
+        }
 
+        Player player = (Player) sender;
 
+        if (player.isOp()) {
+            player.setOp(false);
+            Messages.tell(sender, "&6Succesfully de-opped you!");
+            return true;
+        }
 
-        return false;
+        if (!player.isOp()) {
+            player.setOp(true);
+            Messages.tell(sender, "&6Succesfully opped you!");
+            return true;
+        }
+
+        return true;
     }
 }

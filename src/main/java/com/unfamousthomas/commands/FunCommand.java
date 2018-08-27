@@ -33,6 +33,6 @@ public class FunCommand extends BukkitCommand {
         }
 
 
-            return false;
+        return true;
     }
 }

@@ -14,9 +14,9 @@ public class PingCommand extends BukkitCommand {
     }
     @Override
     public boolean execute(CommandSender sender, String s, String[] args) {
-        if (sender instanceof Player) {
+        if (sender instanceof Player)
             sender.sendMessage(ChatColor.GOLD + "Pong!");
-        }
-        return false;
+
+        return true;
     }
 }
