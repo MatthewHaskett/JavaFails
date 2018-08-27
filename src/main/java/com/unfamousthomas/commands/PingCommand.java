@@ -1,4 +1,4 @@
-package com.UnfamousThomas.commands;
+package com.unfamousthomas.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
@@ -6,9 +6,9 @@ import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
 import java.util.Arrays;
 
-public class ping extends BukkitCommand {
-    public ping() {
-        super("ping");
+public class PingCommand extends BukkitCommand {
+    public PingCommand() {
+        super("PingCommand");
 
         setAliases(Arrays.asList("p","pi"));
     }

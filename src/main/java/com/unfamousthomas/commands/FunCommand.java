@@ -1,4 +1,4 @@
-package com.UnfamousThomas.commands;
+package com.unfamousthomas.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -7,10 +7,10 @@ import org.bukkit.command.defaults.BukkitCommand;
 
 import java.util.Arrays;
 
-public class fun extends BukkitCommand {
+public class FunCommand extends BukkitCommand {
 
-    public fun() {
-        super("fun");
+    public FunCommand() {
+        super("FunCommand");
 
         setAliases(Arrays.asList("f","happy"));
 
@@ -18,7 +18,7 @@ public class fun extends BukkitCommand {
     @Override
     public boolean execute(CommandSender sender, String s, String[] args) {
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.RED + "Please insert something that is fun.");
+            sender.sendMessage(ChatColor.RED + "Please insert something that is FunCommand.");
         } else {
         String player = sender.getName().toString();
             StringBuilder message = new StringBuilder("");
@@ -29,7 +29,7 @@ public class fun extends BukkitCommand {
                 message.append(part);
             }
 
-            Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Fun >>> " + player + ChatColor.AQUA + " thinks that " + message.toString() + " is fun!");
+            Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Fun >>> " + player + ChatColor.AQUA + " thinks that " + message.toString() + " is FunCommand!");
         }
 
 

@@ -1,7 +1,6 @@
-package com.UnfamousThomas.commands;
+package com.unfamousthomas.commands;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
@@ -9,28 +8,28 @@ import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
 
 import java.util.Arrays;
-import com.UnfamousThomas.utils.messages;
+import com.unfamousthomas.utils.Messages;
 import org.bukkit.inventory.ItemStack;
 
-public class spawn extends BukkitCommand {
-    public spawn() {
-        super("spawn");
+public class SpawnCommand extends BukkitCommand {
+    public SpawnCommand() {
+        super("SpawnCommand");
 
         setAliases(Arrays.asList("home","s"));
-        setDescription("teleports to spawn.");
+        setDescription("teleports to SpawnCommand.");
 }
 
     public boolean execute(CommandSender sender, String s, String[] args) {
             if (!(sender instanceof Player)) {
-                messages.tell(sender, "&4NO! YOU ARE NOT A PLAYER NOOB!");
+                Messages.tell(sender, "&4NO! YOU ARE NOT A PLAYER NOOB!");
                 return false;
             }
         Player player = (Player) sender;
-        if (!(player.hasPermission("fails.spawn"))){
-                messages.tell(sender, "&4You do not have permissions for that.");
+        if (!(player.hasPermission("fails.SpawnCommand"))){
+                Messages.tell(sender, "&4You do not have permissions for that.");
                 return false;
         }
-        messages.tell(sender,"&6Teleported you to spawn.");
+        Messages.tell(sender,"&6Teleported you to SpawnCommand.");
         player.teleport(new Location(Bukkit.getWorld("world"), 294, 74, 182));
         player.getInventory().addItem(new ItemStack(Material.DIAMOND, 2));
         return false;
