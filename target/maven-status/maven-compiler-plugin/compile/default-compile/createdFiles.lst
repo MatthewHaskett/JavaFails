@@ -5,3 +5,4 @@ com\UnfamousThomas\utils\RegCommand.class
 com\UnfamousThomas\commands\fun.class
 com\UnfamousThomas\commands\ping.class
 com\UnfamousThomas\commands\spawn.class
+com\UnfamousThomas\events\onJoin.class
