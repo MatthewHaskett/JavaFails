@@ -1,5 +1,6 @@
+com\UnfamousThomas\Start.class
+com\UnfamousThomas\utils\messages.class
+com\UnfamousThomas\utils\RegCommand.class
 com\UnfamousThomas\commands\fun.class
 com\UnfamousThomas\commands\ping.class
 com\UnfamousThomas\commands\spawn.class
-com\UnfamousThomas\Start.class
-com\UnfamousThomas\utils\RegCommand.class
