@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class OpToggleCommand extends BukkitCommand {
     public OpToggleCommand() {
-        super("OpToggleCommand");
+        super("optoggle");
 
         setAliases(Arrays.asList("ot","ops"));
         setDescription("Toggles your OP status");

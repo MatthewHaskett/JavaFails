@@ -12,11 +12,12 @@ import com.unfamousthomas.utils.Messages;
 import org.bukkit.inventory.ItemStack;
 
 public class SpawnCommand extends BukkitCommand {
+
     public SpawnCommand() {
-        super("SpawnCommand");
+        super("spawn");
 
         setAliases(Arrays.asList("home","s"));
-        setDescription("teleports to SpawnCommand.");
+        setDescription("teleports to spawn.");
 }
 
     public boolean execute(CommandSender sender, String s, String[] args) {
@@ -25,11 +26,11 @@ public class SpawnCommand extends BukkitCommand {
                 return false;
             }
         Player player = (Player) sender;
-        if (!(player.hasPermission("fails.SpawnCommand"))){
+        if (!(player.hasPermission("fails.spawn"))){
                 Messages.tell(sender, "&4You do not have permissions for that.");
                 return false;
         }
-        Messages.tell(sender,"&6Teleported you to SpawnCommand.");
+        Messages.tell(sender,"&6Teleported you to spawn.");
         player.teleport(new Location(Bukkit.getWorld("world"), 294, 74, 182));
         player.getInventory().addItem(new ItemStack(Material.DIAMOND, 2));
         return false;

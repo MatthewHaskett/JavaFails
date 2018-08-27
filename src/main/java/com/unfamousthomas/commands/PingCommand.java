@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class PingCommand extends BukkitCommand {
     public PingCommand() {
-        super("PingCommand");
+        super("ping");
 
         setAliases(Arrays.asList("p","pi"));
     }

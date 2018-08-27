@@ -17,10 +17,10 @@ public class Start extends JavaPlugin {
         Bukkit.getServer().getLogger().info("WOW IT ENABLED!");
 
         //Commands:
-        RegCommand.RegisterCommand(new PingCommand());
-        RegCommand.RegisterCommand(new FunCommand());
-        RegCommand.RegisterCommand(new SpawnCommand());
-        RegCommand.RegisterCommand(new OpToggleCommand());
+        RegCommand.registerCommand(new PingCommand());
+        RegCommand.registerCommand(new FunCommand());
+        RegCommand.registerCommand(new SpawnCommand());
+        RegCommand.registerCommand(new OpToggleCommand());
 
         //Events:
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);

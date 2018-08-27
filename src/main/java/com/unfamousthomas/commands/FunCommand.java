@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class FunCommand extends BukkitCommand {
 
     public FunCommand() {
-        super("FunCommand");
+        super("fun");
 
         setAliases(Arrays.asList("f","happy"));
 
@@ -20,7 +20,7 @@ public class FunCommand extends BukkitCommand {
         if (args.length == 0) {
             sender.sendMessage(ChatColor.RED + "Please insert something that is FunCommand.");
         } else {
-        String player = sender.getName().toString();
+        String player = sender.getName();
             StringBuilder message = new StringBuilder("");
             for (String part : args) {
                 if (!message.toString().equals(""))
@@ -29,7 +29,7 @@ public class FunCommand extends BukkitCommand {
                 message.append(part);
             }
 
-            Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Fun >>> " + player + ChatColor.AQUA + " thinks that " + message.toString() + " is FunCommand!");
+            Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Fun >>> " + player + ChatColor.AQUA + " thinks that " + message.toString() + " is fun!");
         }
 
 

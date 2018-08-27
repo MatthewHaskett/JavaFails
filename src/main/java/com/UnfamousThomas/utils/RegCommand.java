@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 
 public class RegCommand {
 
-    public static void RegisterCommand(BukkitCommand command) {
+    public static void registerCommand(BukkitCommand command) {
         try {
             final Field commandMapField = Bukkit.getServer().getClass().getDeclaredField("commandMap");
             commandMapField.setAccessible(true);
