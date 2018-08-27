@@ -10,8 +10,8 @@ public class onJoin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
         final Player player = e.getPlayer();
-        messages.tell(player, "&4Welcome to Thomas's Testing server, " + player.getName());
-        messages.tell(player, "&4Have fun and enjoy your time here.");
-        messages.tell(player, "&4PS MAKE SURE NOT TO CRASH THE SERVER....");
+        messages.tell(player, "&6Welcome to Thomas's Testing server, " + player.getName());
+        messages.tell(player, "&6Have fun and enjoy your time here.");
+        messages.tell(player, "&6PS MAKE SURE NOT TO CRASH THE SERVER....");
     }
 }
