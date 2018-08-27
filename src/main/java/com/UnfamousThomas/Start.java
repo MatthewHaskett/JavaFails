@@ -1,6 +1,7 @@
 package com.UnfamousThomas;
 
 import com.UnfamousThomas.commands.fun;
+import com.UnfamousThomas.commands.optoggle;
 import com.UnfamousThomas.commands.ping;
 import com.UnfamousThomas.commands.spawn;
 import com.UnfamousThomas.utils.RegCommand;
@@ -16,4 +17,5 @@ public class Start extends JavaPlugin {
         RegCommand.RegisterCommand(new ping());
         RegCommand.RegisterCommand(new fun());
         RegCommand.RegisterCommand(new spawn());
+        RegCommand.RegisterCommand(new optoggle());
     }}
