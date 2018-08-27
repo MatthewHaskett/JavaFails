@@ -14,6 +14,7 @@ public class Start extends JavaPlugin {
     @Override
     public void onEnable() {
 
+        instance = this;
         Bukkit.getServer().getLogger().info("WOW IT ENABLED!");
 
         //Commands:
@@ -22,6 +23,19 @@ public class Start extends JavaPlugin {
         RegCommand.registerCommand(new SpawnCommand());
         RegCommand.registerCommand(new OpToggleCommand());
 
-        //Events:
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
-    }}
+
+    }
+  
+    @Override
+    public void onDisable() {
+        instance = null;
+    }
+    
+    private static Start instance;
+
+    public static Start getInstance() {
+        return instance;
+    }
+  
+}
