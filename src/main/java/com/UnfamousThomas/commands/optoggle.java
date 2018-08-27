@@ -1,7 +1,6 @@
 package com.UnfamousThomas.commands;
 
 import com.UnfamousThomas.utils.messages;
-import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
@@ -23,15 +22,18 @@ public class optoggle extends BukkitCommand {
             }
             if (!sender.hasPermission("fails.op")) {
                 messages.tell(sender, "&4You do not have enough permissions.");
+                return false;
             }
             Player player = (Player) sender;
             if (player.isOp()) {
                 player.setOp(false);
                 messages.tell(sender, "&6Succesfully de-opped you!");
+                return false;
             }
             if (!player.isOp()) {
                 player.setOp(true);
                 messages.tell(sender, "&6Succesfully opped you!");
+                return false;
             }
 
 
